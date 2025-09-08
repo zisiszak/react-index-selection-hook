@@ -1,0 +1,36 @@
+.item {
+	position: relative;
+	user-select: none;
+	overflow: hidden;
+	aspect-ratio: 1 / 1;
+}
+
+.itemSelectionCircle {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+
+	color: white;
+
+	border: solid 2px white;
+	border-radius: 50%;
+	box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 0.5);
+}
+
+.itemSelectionCircleSelected {
+	composes: itemSelectionCircle;
+	background-color: rgb(26, 124, 243);
+}
+
+.image {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+}
+
+.imageDuringSelection {
+	composes: image;
+	pointer-events: none;
+}
