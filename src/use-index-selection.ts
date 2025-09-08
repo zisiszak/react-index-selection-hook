@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { ASSERT } from './assert';
+// import { ASSERT } from './assert';
 
 export function useIndexSelection<E extends HTMLElement = HTMLDivElement>({
 	enabled = true,
@@ -79,10 +79,10 @@ export function useIndexSelection<E extends HTMLElement = HTMLDivElement>({
 		const [from, to] = pointerRange.current as [number, number];
 		const prevTo = pointerPrevRangeEnd.current;
 
-		ASSERT(
-			typeof from === 'number' && typeof to === 'number',
-			'from and/or to are not numbers',
-		);
+		// ASSERT(
+		// 	typeof from === 'number' && typeof to === 'number',
+		// 	'from and/or to are not numbers',
+		// );
 
 		const baseFn =
 			pointerMode.current === '+' ? selectIndex : deselectIndex;
@@ -166,7 +166,7 @@ export function useIndexSelection<E extends HTMLElement = HTMLDivElement>({
 
 			const selectionTargetEl =
 				elementsUnderPointerList[indexOfContainerEl - 1]!;
-			ASSERT(!!selectionTargetEl, 'selectionTargetEl is not defined');
+			// ASSERT(!!selectionTargetEl, 'selectionTargetEl is not defined');
 
 			const selectionIndex = parseInt(
 				selectionTargetEl.getAttribute('selection-index') ?? '',
