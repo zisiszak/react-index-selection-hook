@@ -4,6 +4,8 @@ A React hook that is used for selection interactions for items placed in a grid.
 
 This was created as an experiment, done as part of a larger personal project.
 
+![Demonstration of the hook in use](DEMO.webp "Demonstration")
+
 ## Demo usage
 
 The project includes a functioning demo.
